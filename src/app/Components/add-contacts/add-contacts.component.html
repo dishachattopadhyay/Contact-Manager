@@ -1,0 +1,55 @@
+<!-- <form (ngSubmit)="OnSubmit()" [formGroup]="phoneNumber">
+    <h1 class="py-10 font-extrabold test-5xl">
+        Contact Manager
+    </h1>
+    <div class="class"></div>
+</form> -->
+
+
+<div class="col-8 pt-2 px-4">
+    <div class="card">
+        <div class="card-header bg-success">
+            Add New Contact
+        </div>
+        <form [formGroup]="contactsForm">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8 ">
+                        <label for="" >Name<span style="color:rgb(255, 0, 0)">*</span></label>
+                        <input formControlName="name" type="text" required="" class="form-control" >
+                        <!-- <span ng-show="projectForm.projectName.$touched && projectForm.projectName.$invalid">The name is required.</span> -->
+                    </div>
+                    <div class="col-8">
+                        <label for="">Email</label>
+                        <input formControlName="email" type="text" class="form-control">
+                    </div>
+                    <div class="col-8">
+                        <label for="">Phone No:<span style="color:rgb(255, 0, 0)">*</span></label>
+                        <input formControlName="phoneNumber" type="text" class="form-control">
+                    </div>
+                    
+                    <div class="col-8 form-check pt-2 px-4">
+                        
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input form-control h-4 w-4" type="checkbox" value="" id="flexCheckDefault" formControlName="favorite">
+                            <span>Favorite</span>
+                        </label></div>
+
+                    
+                    
+                    <div class="row pt-2">
+                        <div class="col-6 text-center">
+                            <button class="btn btn-secondary" >Reset</button>
+                        </div>
+                        <div class="col-6 text-center">
+                            <button class="btn btn-success" [disabled]="contactsForm.invalid" (click)="OnSubmit()">Save
+                                <!-- {{clientObj.clientId != 0 ? 'Update':'Save'}} -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
